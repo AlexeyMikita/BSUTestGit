@@ -1,4 +1,4 @@
 
-public class HelloWorld {
-
+public final class HelloWorld  {
+	
 }
