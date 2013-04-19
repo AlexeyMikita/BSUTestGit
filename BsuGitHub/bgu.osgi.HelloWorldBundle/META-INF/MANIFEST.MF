@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HelloWorldBundle
+Bundle-SymbolicName: bgu.osgi.HelloWorldBundle
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: bgu.osgi.helloworldbundle.Activator
+Bundle-Vendor: bsu.fpmi.group8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
