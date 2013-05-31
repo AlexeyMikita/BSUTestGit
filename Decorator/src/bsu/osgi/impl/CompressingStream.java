@@ -3,16 +3,16 @@ package bsu.osgi.impl;
 import bsu.osgi.DecoratorStream;
 import bsu.osgi.IAbstractStream;
 
-public class ASCII7Stream extends DecoratorStream {
+public class CompressingStream extends DecoratorStream {
 	
-	public ASCII7Stream() {}
-	public ASCII7Stream (IAbstractStream pAbstractStream) {
+	public CompressingStream() {}
+	public CompressingStream (IAbstractStream pAbstractStream) {
 		setAbstractStream(pAbstractStream);
 	}
 
 	@Override
 	public int putBytes(byte[] pByte) {
-		System.out.println("ASCII7Stream : putBytes");
+		System.out.println("CompressingStream : putBytes");
 		IAbstractStream abstractStream = getAbstractStream();
 		if (abstractStream != null) {
 			abstractStream.putBytes(pByte);
@@ -22,7 +22,7 @@ public class ASCII7Stream extends DecoratorStream {
 
 	@Override
 	public int putInt(int pInt) {
-		System.out.println("ASCII7Stream : putInt");
+		System.out.println("CompressingStream : putInt");
 		IAbstractStream abstractStream = getAbstractStream();
 		if (abstractStream != null) {
 			abstractStream.putInt(pInt);
@@ -32,11 +32,12 @@ public class ASCII7Stream extends DecoratorStream {
 
 	@Override
 	public void handleBufferFull() {
-		System.out.println("ASCII7Stream : handleBufferFull");
+		System.out.println("CompressingStream : handleBufferFull");
 		IAbstractStream abstractStream = getAbstractStream();
 		if (abstractStream != null) {
 			abstractStream.handleBufferFull();
 		}
 	}
+
 
 }
